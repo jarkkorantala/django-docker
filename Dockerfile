@@ -27,7 +27,7 @@ RUN easy_install pip
 
 # Handle urllib3 InsecurePlatformWarning
 RUN apt-get install -y libffi-dev libssl-dev libpython2.7-dev
-RUN pip install requests[security] ndg-httpsclient pyasn1
+RUN pip install --upgrade requests[security] ndg-httpsclient pyasn1
 
 # Configure Django project
 ADD . /code
